@@ -1,0 +1,1252 @@
+/* Laat elke section schermbreed zijn */
+main > section {
+  inline-size: 100vw;
+  position: relative;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  overflow-x: clip;
+  background-color: inherit;
+}
+
+h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Productsectie 1 */
+main > section:first-of-type {
+  background-color: var(--color-bg-1);
+}
+
+main > section:first-of-type > section {
+  background-color: var(--color-bg-1);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 5em 0 0 0;
+}
+
+main section:first-of-type > section > h2 {
+  margin: 0 0 0.85em 0;
+  padding-top: 3em;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--quaternary-color);
+  text-align: center;
+}
+
+main section:first-of-type > section > h3 {
+  margin: 0 0 0.375em 0;
+  font-size: 2.25em;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+/* vanaf € 2.999 */
+main section:first-of-type > section > p {
+  margin: 0 0 1em 0;
+  font-size: 0.75em;
+  color: var(--quaternary-color);
+  text-align: center;
+}
+
+/* fiets-afbeelding - mobiele versie (binnen nested section) */
+main > section:first-of-type > section > img {
+  display: block;
+  width: 120%;
+  height: auto;
+  margin: 0 0 1.25em 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* fiets-afbeelding - desktop versie (direct binnen eerste section) */
+main > section:first-of-type > img {
+  max-width: 45rem;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  /* Maak eerste section flex op desktop */
+
+  main > section:first-of-type {
+    padding: 0 5em;
+  }
+
+  /* 
+  Voor deze en de volgende secties, heb ik een flex-flow: row wrap; toegevoegd 
+  om de tekst naast elkaar te laten staan.
+  */
+  main > section:first-of-type > section {
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    flex-flow: row wrap;
+    column-gap: 2rem;
+  }
+
+  /* 
+  Vervolgens heb ik de teksten een flex: 1 1 100%; zodat ze dan een breedte van 100% krijgen.
+  En dan een order (order: 1; order: 2; order: 4; etc.) zodat ze in de juiste volgorde 
+  komen te staan. Dit heb ik voor de h2, h3 en p. 
+  
+  Zo heb ik de USPs (ul's) ook aangepast, zodat ze onderaan komen te staan.
+  */
+  main section:first-of-type > section > h2 {
+    font-size: 1.5em;
+    text-align: left;
+    flex: 1 1 100%;
+    order: 1;
+  }
+
+  main section:first-of-type > section > h3 {
+    font-size: 3em;
+    text-align: left;
+    flex: 1 1 100%;
+    order: 2;
+  }
+
+  main section:first-of-type > section > p {
+    font-size: 1.25em;
+    order: 4;
+    padding-top: 1em;
+  }
+
+  main > section:first-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  /* Verberg mobiele image op desktop */
+  main > section:first-of-type > section > img {
+    display: none;
+  }
+
+  /* Toon desktop image op desktop */
+  main > section:first-of-type > img {
+    display: block;
+    margin-top: 10rem;
+  }
+}
+
+/* PRODUCSECTIE 2 */
+main > section:nth-of-type(2) {
+  background-color: var(--color-bg-2);
+}
+
+main > section:nth-of-type(2) > section {
+  background-color: var(--color-bg-2);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+main section:nth-of-type(2) > section > h2 {
+  margin: 0 0 0.85em 0;
+  padding-top: 3em;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--quaternary-color);
+  text-align: center;
+}
+
+/* Deel het zadel,deel de vrijheid */
+main section:nth-of-type(2) > section > h3 {
+  margin: 0 0 0.375em 0;
+  font-size: 2.25em;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+main section:nth-of-type(2) > section > p {
+  margin: 0 0 1em 0;
+  font-size: 0.75em;
+  color: var(--quaternary-color);
+  text-align: center;
+}
+
+/* fiets-afbeelding - mobiele versie (binnen nested section) */
+main > section:nth-of-type(2) > section > img {
+  display: block;
+  width: 120%;
+  height: auto;
+  margin: 0 0 1.25em 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* fiets-afbeelding - desktop versie (direct binnen tweede section) */
+main > section:nth-of-type(2) > img {
+  max-width: 45rem;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  /* Maak tweede section flex op desktop */
+
+  main > section:nth-of-type(2) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  main > section:nth-of-type(2) > section {
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    flex-flow: row wrap;
+    column-gap: 2rem;
+  }
+
+  main section:nth-of-type(2) > section > h2 {
+    font-size: 1.5em;
+    text-align: left;
+    flex: 1 1 100%;
+    order: 1;
+  }
+
+  main section:nth-of-type(2) > section > h3 {
+    font-size: 3em;
+    text-align: left;
+    flex: 1 1 100%;
+    order: 2;
+  }
+
+  main section:nth-of-type(2) > section > p {
+    font-size: 1.25em;
+    order: 4;
+    padding-top: 1em;
+  }
+
+  /* Verberg mobiele image op desktop */
+  main > section:nth-of-type(2) > section > img {
+    display: none;
+  }
+
+  /* Toon desktop image op desktop */
+  main > section:nth-of-type(2) > img {
+    display: block;
+    margin-top: 10rem;
+  }
+}
+
+/* Productsectie 3 */
+
+main > section:nth-of-type(3) {
+  background-color: var(--color-bg-3);
+}
+
+main > section:nth-of-type(3) > section {
+  background-color: var(--color-bg-3);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+main section:nth-of-type(3) > section > h2 {
+  margin: 0 0 0.85em 0;
+  padding-top: 3em;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--quaternary-color);
+  text-align: center;
+}
+
+/* Voel je één met je fiets */
+main section:nth-of-type(3) > section > h3 {
+  margin: 0 0 0.375em 0;
+  font-size: 2.25em;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+main section:nth-of-type(3) > section > p {
+  margin: 0 0 1em 0;
+  font-size: 0.75em;
+  color: var(--quaternary-color);
+  text-align: center;
+}
+
+/* fiets-afbeelding - mobiele versie (binnen nested section) */
+main > section:nth-of-type(3) > section > img {
+  display: block;
+  width: 120%;
+  height: auto;
+  margin: 0 0 1.25em 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* fiets-afbeelding - desktop versie (direct binnen derde section) */
+main > section:nth-of-type(3) > img {
+  max-width: 45rem;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  /* Maak derde section flex op desktop */
+
+  main > section:nth-of-type(3) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 5em;
+  }
+
+  main > section:nth-of-type(3) > section {
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 2rem;
+    flex-flow: row wrap;
+    height: auto;
+  }
+
+  main section:nth-of-type(3) > section > h2 {
+    font-size: 1.5em;
+    text-align: left;
+    flex: 1 1 100%;
+    order: 1;
+  }
+
+  main section:nth-of-type(3) > section > h3 {
+    font-size: 3em;
+    text-align: left;
+    flex: 1 1 100%;
+    order: 2;
+  }
+
+  main section:nth-of-type(3) > section > p {
+    font-size: 1.25em;
+    order: 4;
+    padding-top: 1em;
+  }
+
+  /* Verberg mobiele image op desktop */
+  main > section:nth-of-type(3) > section > img {
+    display: none;
+  }
+
+  /* Toon desktop image op desktop */
+  main > section:nth-of-type(3) > img {
+    display: block;
+    margin-top: 10rem;
+  }
+}
+
+/* Meer dan een electrische fiets */
+main section:nth-of-type(4) {
+  background-color: var(--color-bg-4);
+  padding: 3em 0 3em 0;
+  overflow-x: hidden;
+}
+
+main section:nth-of-type(4) > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+main section:nth-of-type(4) > div > img {
+  width: 18em;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Op mobiel: alleen de 3e afbeelding (middelste) tonen */
+main section:nth-of-type(4) > div > img:first-child,
+main section:nth-of-type(4) > div > img:nth-child(2),
+main section:nth-of-type(4) > div > img:nth-child(4),
+main section:nth-of-type(4) > div > img:last-child {
+  display: none;
+}
+
+main section:nth-of-type(4) > div > img:nth-child(3) {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  /* Op desktop: alle afbeeldingen tonen - overschrijf display: none */
+  main section:nth-of-type(4) > div > img:first-child,
+  main section:nth-of-type(4) > div > img:nth-child(2),
+  main section:nth-of-type(4) > div > img:nth-child(3),
+  main section:nth-of-type(4) > div > img:nth-child(4),
+  main section:nth-of-type(4) > div > img:last-child {
+    display: block;
+  }
+
+  /* 1e afbeelding: half op scherm (links), in het midden qua hoogte */
+  main section:nth-of-type(4) > div > img:first-child {
+    margin-left: -9em;
+    margin-top: 0;
+  }
+
+  /* 2e afbeelding: een paar rem erboven */
+  main section:nth-of-type(4) > div > img:nth-child(2) {
+    margin-top: -8rem;
+  }
+
+  /* 3e afbeelding: precies in het midden horizontaal, een paar rem eronder */
+  main section:nth-of-type(4) > div > img:nth-child(3) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 7rem;
+  }
+
+  /* 4e afbeelding: een paar rem erboven */
+  main section:nth-of-type(4) > div > img:nth-child(4) {
+    margin-top: -8rem;
+  }
+
+  /* 5e afbeelding: half op scherm (rechts), in het midden qua hoogte */
+  main section:nth-of-type(4) > div > img:last-child {
+    margin-right: -9em;
+    margin-top: 0;
+  }
+}
+
+main section:nth-of-type(4) > h2 {
+  margin: 0 0 0.375em 0;
+  padding: 1em 0 0 0;
+  font-size: 2.25em;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+main section:nth-of-type(4) > p {
+  margin: 0 0 1em 0;
+  font-size: 0.75em;
+  color: var(--quaternary-color);
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  main section:nth-of-type(4) > h2 {
+    font-size: 3em;
+    font-weight: 600;
+  }
+
+  main section:nth-of-type(4) > p {
+    font-size: 1.25em;
+    max-width: 70ch;
+    margin: 0 auto;
+  }
+}
+
+/* Productsectie 4 */
+
+main > section:nth-of-type(5) {
+  background-color: var(--color-bg-5);
+}
+
+main > section:nth-of-type(5) > section {
+  background-color: var(--color-bg-5);
+  height: 50em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 5em 0 0 0;
+}
+
+/* Cross */
+main section:nth-of-type(5) > section > h2 {
+  margin: 0 0 0.85em 0;
+  padding-top: 3em;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* gemaakt voor avontuur */
+main section:nth-of-type(5) > section > h3 {
+  margin: 0 0 0.375em 0;
+  font-size: 2.25em;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Vanaf €3.999 */
+main section:nth-of-type(5) > section > p {
+  margin: 0 0 1em 0;
+  font-size: 0.75em;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* fiets-afbeelding - mobiele versie (binnen nested section) */
+main > section:nth-of-type(5) > section > img {
+  display: block;
+  width: 120%;
+  height: auto;
+  margin: 0 0 1.25em 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* fiets-afbeelding - desktop versie (direct binnen vijfde section) */
+main > section:nth-of-type(5) > img {
+  max-width: 45rem;
+  display: none;
+}
+
+/* witte ronde button */
+main > section:nth-of-type(5) > section > a:first-of-type {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
+
+/* hover: kleuren omdraaien */
+main > section:nth-of-type(5) > section > a:first-of-type:hover {
+  background-color: var(--primary-text-color);
+  color: var(--primary-color);
+}
+
+/* Boek een gratis testrit */
+main > section:nth-of-type(5) > section > a:nth-of-type(2) {
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+/* Pijl naast knop */
+main > section:nth-of-type(5) > section > a:nth-of-type(2) svg {
+  color: var(--primary-color);
+}
+
+@media (min-width: 1024px) {
+  /* Maak vijfde section flex op desktop */
+
+  main > section:nth-of-type(5) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 5em 10em;
+  }
+
+  main > section:nth-of-type(5) > section {
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 2rem;
+    flex-flow: row wrap;
+    height: auto;
+  }
+
+  main section:nth-of-type(5) > section > h2 {
+    font-size: 1.5em;
+    text-align: left;
+    flex: 1 1 100%;
+    order: 1;
+  }
+
+  main section:nth-of-type(5) > section > h3 {
+    font-size: 3em;
+    text-align: left;
+    flex: 1 1 100%;
+    order: 2;
+  }
+
+  main section:nth-of-type(5) > section > p {
+    font-size: 1.25em;
+    order: 4;
+    padding-top: 1em;
+  }
+
+  /* Verberg mobiele image op desktop */
+  main > section:nth-of-type(5) > section > img {
+    display: none;
+  }
+
+  /* Toon desktop image op desktop */
+  main > section:nth-of-type(5) > img {
+    display: block;
+    margin-top: 10rem;
+  }
+}
+
+/* VANAF HIER MINI USPS*/
+/* Voor sections met nested section (eerste section) */
+main > section:first-of-type > section > a:nth-of-type(2) + ul,
+/* Voor sections met nested section (tweede section) */
+main > section:nth-of-type(2) > section > a:nth-of-type(2) + ul,
+/* Voor sections met nested section (derde section) */
+main > section:nth-of-type(3) > section > a:nth-of-type(2) + ul,
+/* Voor sections met nested section (vijfde section) */
+main > section:nth-of-type(5) > section > a:nth-of-type(2) + ul,
+/* Voor sections met nested section (zevende section) */
+main > section:nth-of-type(7) > section > a:nth-of-type(2) + ul,
+/* Voor sections zonder nested section (andere sections) */
+main > section > a:nth-of-type(2) + ul {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  list-style: none;
+  padding: 1em 0 3em 0;
+  margin: 1em 1.25em 0 1.25em;
+  border-top: 0.0625em solid;
+  border-color: var(--border-color);
+
+  align-items: flex-end;
+}
+
+/* Media queries voor de USPs */
+@media (min-width: 1024px) {
+  main > section:first-of-type > section > a:nth-of-type(2) + ul,
+  main > section:nth-of-type(2) > section > a:nth-of-type(2) + ul,
+  main > section:nth-of-type(3) > section > a:nth-of-type(2) + ul,
+  main > section:nth-of-type(5) > section > a:nth-of-type(2) + ul,
+  main > section:nth-of-type(7) > section > a:nth-of-type(2) + ul,
+  main > section > a:nth-of-type(2) + ul {
+    flex: 1 1 100%;
+    order: 6;
+    margin: 1em 0 0 0;
+    justify-content: flex-start;
+    align-self: flex-end;
+  }
+}
+
+/* 1. elk item in de lijst - voor sections met nested section */
+main > section:first-of-type > section > a:nth-of-type(2) + ul > li,
+/* 1. elk item in de lijst - voor sections met nested section (tweede section) */
+main > section:nth-of-type(2) > section > a:nth-of-type(2) + ul > li,
+/* 1. elk item in de lijst - voor sections met nested section (derde section) */
+main > section:nth-of-type(3) > section > a:nth-of-type(2) + ul > li,
+/* 1. elk item in de lijst - voor sections met nested section (vijfde section) */
+main > section:nth-of-type(5) > section > a:nth-of-type(2) + ul > li,
+/* 1. elk item in de lijst - voor sections met nested section (zevende section) */
+main > section:nth-of-type(7) > section > a:nth-of-type(2) + ul > li,
+/* 1. elk item in de lijst - voor sections zonder nested section */
+main > section > a:nth-of-type(2) + ul > li {
+  position: relative;
+  padding: 0 0.5em;
+  text-align: center;
+}
+
+/* Media queries voor de USPs */
+@media (min-width: 1024px) {
+  main > section:first-of-type > section > a:nth-of-type(2) + ul > li,
+  main > section:nth-of-type(2) > section > a:nth-of-type(2) + ul > li,
+  main > section:nth-of-type(3) > section > a:nth-of-type(2) + ul > li,
+  main > section:nth-of-type(5) > section > a:nth-of-type(2) + ul > li,
+  main > section:nth-of-type(7) > section > a:nth-of-type(2) + ul > li,
+  main > section > a:nth-of-type(2) + ul > li {
+    text-align: left;
+  }
+}
+
+/* Lijn tussen items - voor sections met nested section */
+main > section:first-of-type > section > a:nth-of-type(2) + ul > li:not(:first-child)::before,
+/* Lijn tussen items - voor sections met nested section (tweede section) */
+main > section:nth-of-type(2) > section > a:nth-of-type(2) + ul > li:not(:first-child)::before,
+/* Lijn tussen items - voor sections met nested section (derde section) */
+main > section:nth-of-type(3) > section > a:nth-of-type(2) + ul > li:not(:first-child)::before,
+/* Lijn tussen items - voor sections met nested section (vijfde section) */
+main > section:nth-of-type(5) > section > a:nth-of-type(2) + ul > li:not(:first-child)::before,
+/* Lijn tussen items - voor sections met nested section (zevende section) */
+main > section:nth-of-type(7) > section > a:nth-of-type(2) + ul > li:not(:first-child)::before,
+/* Lijn tussen items - voor sections zonder nested section */
+main > section > a:nth-of-type(2) + ul > li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  left: -1em; /* lijn tussen de kolommen */
+  top: 0;
+  bottom: 0;
+  width: 0.0625em;
+  background-color: var(--border-color);
+}
+
+/* 3. Bovenste regel - voor sections met nested section */
+main > section:first-of-type > section > a:nth-of-type(2) + ul > li > h4,
+/* 3. Bovenste regel - voor sections met nested section (tweede section) */
+main > section:nth-of-type(2) > section > a:nth-of-type(2) + ul > li > h4,
+/* 3. Bovenste regel - voor sections met nested section (derde section) */
+main > section:nth-of-type(3) > section > a:nth-of-type(2) + ul > li > h4,
+/* 3. Bovenste regel - voor sections met nested section (vijfde section) */
+main > section:nth-of-type(5) > section > a:nth-of-type(2) + ul > li > h4,
+/* 3. Bovenste regel - voor sections met nested section (zevende section) */
+main > section:nth-of-type(7) > section > a:nth-of-type(2) + ul > li > h4,
+/* 3. Bovenste regel - voor sections zonder nested section */
+main > section > a:nth-of-type(2) + ul > li > h4 {
+  margin: 0 0 0.25em;
+  font-size: 0.6em;
+  font-weight: 400;
+  color: var(--quaternary-color);
+}
+
+/* 4. onderste regel - voor sections met nested section */
+main > section:first-of-type > section > a:nth-of-type(2) + ul > li > p,
+/* 4. onderste regel - voor sections met nested section (tweede section) */
+main > section:nth-of-type(2) > section > a:nth-of-type(2) + ul > li > p,
+/* 4. onderste regel - voor sections met nested section (derde section) */
+main > section:nth-of-type(3) > section > a:nth-of-type(2) + ul > li > p,
+/* 4. onderste regel - voor sections met nested section (vijfde section) */
+main > section:nth-of-type(5) > section > a:nth-of-type(2) + ul > li > p,
+/* 4. onderste regel - voor sections met nested section (zevende section) */
+main > section:nth-of-type(7) > section > a:nth-of-type(2) + ul > li > p,
+/* 4. onderste regel - voor sections zonder nested section */
+main > section > a:nth-of-type(2) + ul > li > p {
+  margin: 0;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: var(--primary-text-color);
+}
+
+/* Specifieke styling voor section 5 (Cross) - overschrijft algemene styling */
+main > section:nth-of-type(5) > section > a:nth-of-type(2) + ul {
+  margin: 1.5em 1.25em 0 1.25em;
+  border-top: 0.0425em solid;
+}
+
+main
+  > section:nth-of-type(5)
+  > section
+  > a:nth-of-type(2)
+  + ul
+  > li:not(:first-child)::before {
+  background-color: var(--primary-color);
+}
+
+/* Bovenste regel voor section 5 */
+main > section:nth-of-type(5) > section > a:nth-of-type(2) + ul > li > h4 {
+  color: var(--border-color);
+  font-weight: 300;
+}
+
+/* onderste regel voor section 5 */
+main > section:nth-of-type(5) > section > a:nth-of-type(2) + ul > li > p {
+  color: var(--primary-color);
+  font-weight: 300;
+}
+
+/* Achtergrond afbeelding (Belgie) */
+
+main section:nth-of-type(6) {
+  background-image: url("../images/assembledfiets.webp");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  align-items: center;
+  text-align: center;
+  height: 55em;
+
+  min-height: 80vh;
+  padding: 6em 1em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+/* Ontworpen in Belgie  */
+main section:nth-of-type(6) > h2 {
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* Nu geassembleerd in Frankrijk  */
+main section:nth-of-type(6) > h3 {
+  font-size: 2.25em;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Witte button  */
+body > main > section:nth-of-type(6) > a:first-of-type {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
+
+/* hover: kleuren omdraaien */
+main > section:nth-of-type(6) > a:first-of-type:hover {
+  background-color: var(--primary-text-color);
+  color: var(--primary-color);
+}
+
+/* Productsectie 5 */
+
+main > section:nth-of-type(7) {
+  background-color: var(--color-bg-6);
+}
+
+main > section:nth-of-type(7) > section {
+  background-color: var(--color-bg-6);
+  height: 50em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 5em 0 0 0;
+}
+
+/* Cross ST */
+main section:nth-of-type(7) > section > h2 {
+  margin: 0 0 0.85em 0;
+  padding-top: 3em;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* Niet te schokken */
+main section:nth-of-type(7) > section > h3 {
+  margin: 0 0 0.375em 0;
+  font-size: 2.25em;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Vanaf €3.999 */
+main section:nth-of-type(7) > section > p {
+  margin: 0 0 1em 0;
+  font-size: 0.75em;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* fiets-afbeelding - mobiele versie (binnen nested section) */
+main > section:nth-of-type(7) > section > img {
+  display: block;
+  width: 120%;
+  height: auto;
+  margin: 0 0 1.25em 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* fiets-afbeelding - desktop versie (direct binnen zevende section) */
+main > section:nth-of-type(7) > img {
+  max-width: 45rem;
+  display: none;
+}
+
+/* witte ronde button */
+main > section:nth-of-type(7) > section > a:first-of-type {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
+
+/* hover: kleuren omdraaien */
+main > section:nth-of-type(7) > section > a:first-of-type:hover {
+  background-color: var(--primary-text-color);
+  color: var(--primary-color);
+}
+
+/* Boek een gratis testrit */
+main > section:nth-of-type(7) > section > a:nth-of-type(2) {
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+/* Pijl naast knop */
+main > section:nth-of-type(7) > section > a:nth-of-type(2) svg {
+  color: var(--primary-color);
+}
+
+@media (min-width: 1024px) {
+  /* Maak zevende section flex op desktop */
+
+  main > section:nth-of-type(7) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 5em;
+  }
+
+  main > section:nth-of-type(7) > section {
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 2rem;
+    flex-flow: row wrap;
+    height: auto;
+  }
+  
+  main section:nth-of-type(7) > section > h2 {
+    font-size: 1.5em;
+    text-align: left;
+    flex: 1 1 100%;
+    order: 1;
+  }
+
+  main section:nth-of-type(7) > section > h3 {
+    font-size: 3em;
+    text-align: left;
+    flex: 1 1 100%;
+    order: 2;
+  }
+
+  main section:nth-of-type(7) > section > p {
+    font-size: 1.25em;
+    order: 4;
+    padding-top: 1em;
+  }
+
+  /* Verberg mobiele image op desktop */
+  main > section:nth-of-type(7) > section > img {
+    display: none;
+  }
+
+  /* Toon desktop image op desktop */
+  main > section:nth-of-type(7) > img {
+    display: block;
+    margin-top: 10rem;
+  }
+}
+
+/* Specifieke styling voor section 7 (Cross ST) - overschrijft algemene styling */
+main > section:nth-of-type(7) > section > a:nth-of-type(2) + ul {
+  margin: 1.5em 1.25em 0 1.25em;
+  border-top: 0.0425em solid;
+}
+
+@media (min-width: 1024px) {
+  main > section:nth-of-type(7) > section > a:nth-of-type(2) + ul {
+    margin: 1em 0 0 0;
+    border-color: var(--border-color);
+  }
+}
+
+main
+  > section:nth-of-type(7)
+  > section
+  > a:nth-of-type(2)
+  + ul
+  > li:not(:first-child)::before {
+  background-color: var(--primary-color);
+}
+
+/* Bovenste regel voor section 7 */
+main > section:nth-of-type(7) > section > a:nth-of-type(2) + ul > li > h4 {
+  color: var(--border-color);
+  font-weight: 300;
+}
+
+/* onderste regel voor section 7 */
+main > section:nth-of-type(7) > section > a:nth-of-type(2) + ul > li > p {
+  color: var(--primary-color);
+  font-weight: 300;
+}
+
+/* USP 1,2 en 3 */
+main section:nth-of-type(8) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 0.5em;
+  background-color: var(--tertiary-color);
+}
+
+/* kleine USP's tussenin */
+main section:nth-of-type(8) > section {
+  background-color: var(--primary-color);
+  border-radius: 1em;
+  padding: 1em 1em 1 1em;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SVG-iconen */
+main section:nth-of-type(8) > section > svg {
+  display: block;
+  background-color: var(--tertiary-color);
+  border-radius: 50%;
+  padding: 1em;
+  width: 3.5em;
+  height: 3.5em;
+  margin: 2em auto 0 auto;
+}
+
+/* titels */
+main section:nth-of-type(8) > section > h2 {
+  font-size: 1.5em;
+  font-weight: 400;
+  padding: 0em;
+  color: var(--primary-text-color);
+  margin: 1em;
+}
+
+/* tekst */
+main section:nth-of-type(8) > section > p {
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--quaternary-color);
+  line-height: 1.5;
+}
+
+/* buttons */
+main section:nth-of-type(8) > section > a:first-of-type {
+  display: oflex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em 0 2.5em 0;
+}
+
+/* Op groot scherm: toon alleen eerste card, groter en prominenter */
+@media (min-width: 1024px) {
+  /* Verberg tweede en derde card */
+  main section:nth-of-type(8) > section:nth-of-type(2),
+  main section:nth-of-type(8) > section:nth-of-type(3) {
+    display: none;
+  }
+
+  /* Eerste card groter en prominenter */
+  main section:nth-of-type(8) {
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  main section:nth-of-type(8) > section:first-of-type {
+    padding: 3em 2.5em;
+  }
+
+  /* Groter SVG icoon */
+  main section:nth-of-type(8) > section:first-of-type > svg {
+    width: 5em;
+    height: 5em;
+    margin: 0 auto 2em auto;
+  }
+
+  /* Grotere titel */
+  main section:nth-of-type(8) > section:first-of-type > h2 {
+    font-size: 2.5em;
+    margin: 0.5em 0;
+  }
+
+  /* Grotere tekst */
+  main section:nth-of-type(8) > section:first-of-type > p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 1em 0;
+  }
+
+  /* Grotere button */
+  main section:nth-of-type(8) > section:first-of-type > a:first-of-type {
+    font-size: 1.1em;
+    padding: 1.2em 2em;
+    margin: 2em 0 0 0;
+  }
+}
+
+/* 1. CARROUSEL SECTION */
+
+/* de hele carrousel selectie */
+main section:nth-of-type(9) {
+  padding: 2.5em 1em 3em 1em;
+  background-color: var(--footer-color);
+}
+
+/* Waarom cowboy */
+main section:nth-of-type(9) h2 {
+  text-align: left;
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+/* We staan voor je klaar */
+main section:nth-of-type(9) h3 {
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+/* de layout van de carrousel */
+main section:nth-of-type(9) ul:first-of-type {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  gap: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+/* browser’s standaard scrollbalk */
+main section:nth-of-type(9) ul:first-of-type::-webkit-scrollbar {
+  display: none;
+}
+main section:nth-of-type(9) ul:first-of-type > li {
+  flex-basis: 30%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  list-style: none;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--primary-text-color);
+  border-radius: 1em;
+  padding: 1em;
+  min-height: 10em;
+}
+/* Eerste icoontjes */
+main section:nth-of-type(9) li > svg {
+  display: inline-block;
+  color: var(--primary-color);
+  width: 2em;
+  height: 2em;
+  margin: 0.5em;
+}
+
+/* 200+ vestigingen ect.*/
+main section:nth-of-type(9) li h4 {
+  font-size: 1em;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+/* de tekst */
+main section:nth-of-type(9) li p {
+  color: var(--quaternary-color);
+  font-size: 0.9em;
+  font-weight: 300;
+}
+/* Plus icoontje link */
+main section:nth-of-type(9) li a:last-of-type {
+  position: absolute;
+  bottom: 1.5em;
+  right: 1.5em;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  padding: 0.4em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Plus icoontje zelf */
+main section:nth-of-type(9) li a svg {
+  width: 1.25em;
+  height: auto;
+  color: var(--primary-text-color);
+  transition: transform 0.2 ease;
+}
+
+main section:nth-of-type(9) li a:hover svg {
+  transform: translateX(0.5em);
+}
+
+/* 2. BUTTONS ONDERAAN CARROUSEL */
+
+main section:nth-of-type(9) ul:first-of-type::scroll-button(*) {
+  width: 2.8em;
+  aspect-ratio: 1;
+  background-color: var(--accent-color);
+  color: var(--tertiary-color);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+
+  position: absolute;
+  bottom: 0;
+  transform: translateY(0);
+
+  display: grid;
+  place-items: center;
+  font-size: 1.25em;
+
+  box-shadow: 0 0.15em 0.4em var(--footer-color);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+main section:nth-of-type(9) ul:first-of-type::scroll-button(inline-end) {
+  content: "›" / "Volgende";
+  right: clamp(1rem, 5vw, 2rem);
+}
+
+main section:nth-of-type(9) ul:first-of-type::scroll-button(inline-start) {
+  content: "‹" / "Vorige";
+  right: clamp(6rem, 5vw, 2rem);
+}
+
+main section:nth-of-type(9) ul:first-of-type::scroll-button(*):hover {
+  background-color: var(--secondary-color);
+  transform: translateY(0) scale(1.05);
+}
+
+main section:nth-of-type(9) ul:first-of-type::scroll-button(*):disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: translateY(0) scale(1);
+}
+
+/* 3. DE DOTS ONDER DE CARROUSEL */
+
+main section:nth-of-type(9) ul:first-of-type {
+  /* verberg scrollbar en toon marker-group onderaan */
+  scrollbar-width: none;
+  scroll-marker-group: after;
+}
+
+main section:nth-of-type(9) ul:first-of-type::scroll-marker-group {
+  height: 3em;
+  margin: 0 3.5em 0; /* ruimte boven & zijkant (laat plek voor pijlen) */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  row-gap: 0.25em;
+  column-gap: 0.5em;
+}
+
+main section:nth-of-type(9) ul:first-of-type > li::scroll-marker {
+  content: "" / "naar" attr(data-label);
+  width: 0.3em;
+  aspect-ratio: 1;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  transition: background-color 0.25s ease;
+}
+
+main
+  section:nth-of-type(9)
+  ul:first-of-type
+  > li::scroll-marker:target-current {
+  background-color: var(--primary-color);
+}

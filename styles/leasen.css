@@ -1,0 +1,734 @@
+/* Header transparant */
+header {
+  background-color: transparent;
+  position: absolute;
+  top: 2.8em;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  padding: 1em 2em;
+}
+
+header > a > svg {
+  color: var(--primary-color);
+}
+
+/* Profiel (voor mobiel is hij hidden)*/
+header > ul > li:first-child > a > svg {
+  display: none;
+  color: var(--primary-color);
+}
+
+/* shopping bag  */
+header > ul > li:nth-child(2) > a > svg {
+  color: var(--primary-color);
+}
+
+/* button van de hamburger menu  */
+header > ul > li:nth-child(3) > button {
+  background-color: transparent;
+}
+
+/* hamburger menu  */
+header > ul > li:nth-child(3) > button > svg {
+  color: var(--primary-color);
+}
+
+/* Meldingsbalk blijft zwart */
+body > section:first-of-type {
+  position: relative;
+  z-index: 20;
+}
+
+body > section header > nav > section {
+  padding: 1rem 0 0 1.5em;
+}
+
+/* Hero section*/
+main > section:first-of-type {
+  background-image: url("../images/manfiets.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+  /* padding: 2em 1em; */
+}
+
+/* Tekst in hero */
+main > section:first-of-type > h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
+  color: var(--primary-color);
+}
+
+main > section:first-of-type > h2 {
+  font-size: 1.25em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  color: var(--primary-color);
+}
+
+/* Witte button  */
+main > section:first-of-type > a:first-of-type {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  transform: translateY(5em);
+}
+
+/* hover: kleuren omdraaien */
+main > section:first-of-type > a:first-of-type:hover {
+  background-color: var(--primary-text-color);
+  color: var(--primary-color);
+}
+
+/* Desktop: Hero section */
+@media (min-width: 1024px) {
+  main > section:first-of-type {
+    padding: 0 2em;
+  }
+
+  main > section:first-of-type > h1 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+  }
+
+  main > section:first-of-type > h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  main > section:first-of-type > a:first-of-type {
+    transform: translateY(3em);
+  }
+}
+
+/* Eerste tekst */
+main section:nth-of-type(2) > p {
+  font-size: 1.3em;
+  padding: 2em 1.5em;
+  font-weight: 400;
+  text-align: left;
+  max-width: 50em;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Desktop: Eerste tekst */
+@media (min-width: 1024px) {
+  main section:nth-of-type(2) > p {
+    padding: 4em 2em;
+    font-size: 1.4em;
+  }
+}
+
+/* De section zelf */
+main > section:nth-of-type(3) {
+  position: relative;
+  margin: 2em 1.25em;
+}
+
+/* Foto-blok bovenaan (decoratief) */
+main > section:nth-of-type(3)::before {
+  content: "";
+  display: block;
+  height: 35em;
+  background: url("../images/leasecowboy.jpg") center / cover no-repeat;
+  border-radius: 0.75em;
+  margin-bottom: 1.25em;
+}
+
+/* h2, Tekst en knop eronder */
+main > section:nth-of-type(3) > article > h2 {
+  font-size: 2.3em;
+  margin: 0 0 0.5em 0;
+  font-weight: 400;
+  color: var(--primary-text-color);
+}
+
+main > section:nth-of-type(3) > article > p {
+  line-height: 1.5;
+  color: var(--quaternary-color);
+  font-weight: 400;
+  max-width: 40em;
+  margin: 0 0 1em 0;
+  font-size: 1em;
+}
+
+/* Start nu button */
+main > section:nth-of-type(3) > article > a:first-of-type {
+  display: inline-block;
+  padding: 1em 1.25em;
+  border-radius: 2em;
+  background: var(--primary-text-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-left: 0;
+}
+
+main > section:nth-of-type(3) > article > a:first-of-type:hover {
+  background-color: var(--tertiary-color);
+}
+
+/* Desktop: Leaseproces sectie */
+@media (min-width: 1024px) {
+  main > section:nth-of-type(2) {
+    max-width: 80em;
+    margin: 6em auto;
+    padding: 0 2em;
+  }
+  main > section:nth-of-type(2) > p {
+    font-size: 1.7em;
+    line-height: 1.7;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    max-width: 60%;
+  }
+
+  main > section:nth-of-type(3) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4em;
+    align-items: center;
+    max-width: 80em;
+    margin: 6em auto;
+    padding: 0 2em;
+  }
+
+  main > section:nth-of-type(3)::before {
+    height: 50em;
+    margin-bottom: 0;
+    flex: 0 0 50%;
+    width: 50%;
+  }
+
+  main > section:nth-of-type(3) > article {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main > section:nth-of-type(3) > article > h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+  }
+
+  main > section:nth-of-type(3) > article > p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 1.5em;
+  }
+
+  main > section:nth-of-type(3)::after {
+    display: none;
+  }
+}
+
+/* DE HELE CARROUSEL SECTIE */
+main > section:nth-of-type(4) > section:first-of-type::scroll-button(*) {
+  width: 2.8em;
+  aspect-ratio: 1;
+  background-color: var(--accent-color);
+  color: var(--tertiary-color);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+
+  position: absolute;
+  bottom: 0;
+  transform: translateY(0);
+
+  display: grid;
+  place-items: center;
+  font-size: 1.25em;
+
+  box-shadow: 0 0.15em 0.4em var(--footer-color);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+main > section:nth-of-type(4) {
+  position: relative;
+}
+
+main > section:nth-of-type(4) > section:first-of-type::scroll-button(inline-end) {
+  content: "›" / "Volgende";
+  right: clamp(1rem, 5vw, 2rem);
+}
+
+main > section:nth-of-type(4) > section:first-of-type::scroll-button(inline-start) {
+  content: "‹" / "Vorige";
+  right: clamp(6rem, 5vw, 2rem);
+}
+
+main > section:nth-of-type(4) > section:first-of-type::scroll-button(*):hover {
+  background-color: var(--secondary-color);
+  transform: translateY(0) scale(1.05);
+}
+
+main > section:nth-of-type(4) > section:first-of-type::scroll-button(*):disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: translateY(0) scale(1);
+}
+
+main > section:nth-of-type(4) {
+  padding: 2.5em 1em 3em 1em;
+  text-align: center;
+}
+
+/* Onze providers */
+main > section:nth-of-type(4) > h2 {
+  font-size: 2.3em;
+  margin: 0 0 0.5em 0;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  text-align: left;
+  flex: 0 0 100%;
+  order: -1;
+}
+
+/* de layout van de carrousel - container voor alle articles */
+main > section:nth-of-type(4) > section {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  flex-wrap: nowrap;
+  margin-bottom: 1rem;
+}
+
+/* browser's standaard scrollbalk */
+main section:nth-of-type(4) > section::-webkit-scrollbar {
+  display: none;
+}
+
+main section:nth-of-type(4) > section > article {
+  flex: 0 0 95%;
+  scroll-snap-align: start;
+  scroll-margin-inline-start: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--tertiary-color);
+  padding: 1rem 2em;
+  margin: 0;
+  border-radius: 0.5em;
+}
+
+/* Logo's */
+main section:nth-of-type(4) > section > article > img {
+  display: inline-block;
+  color: var(--primary-color);
+  height: 2em;
+  width: fit-content;
+  margin: 0.5em;
+}
+
+/* borderlijn onder elk logo*/
+main section:nth-of-type(4) > section > article > img + p::before {
+  content: "";
+  position: absolute;
+  top: 3.7em;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 0.05em;
+  background-color: var(--border-color);
+}
+
+/* De teksts */
+main section:nth-of-type(4) > section > article > p {
+  color: var(--primary-text-color);
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.5em;
+  padding-top: 1rem;
+  text-align: left;
+}
+
+/* Begin hier button */
+main > section:nth-of-type(4) > a:first-of-type {
+  display: inline-block;
+  text-align: center;
+  flex: 0 0 100%;
+  margin: 3em auto 0 auto;
+  padding: 1em 1.25em;
+  border-radius: 2em;
+  background: var(--primary-text-color);
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+main > section:nth-of-type(4) > a:first-of-type:hover {
+  background-color: var(--tertiary-color);
+}
+
+/* Desktop: Providers sectie */
+@media (min-width: 1024px) {
+  main > section:nth-of-type(4) {
+    margin: 6em auto;
+    padding: 4em 0 4rem 2em;
+  }
+
+  main > section:nth-of-type(4) > h2 {
+    font-size: 2.5em;
+    margin-bottom: 2rem;
+  }
+
+  main > section:nth-of-type(4) > a {
+    float: left;
+  }
+
+  main > section:nth-of-type(4) > section {
+    margin-bottom: 1rem;
+  }
+
+  main > section:nth-of-type(4) > section > article {
+    flex: 0 0 30%;
+    scroll-snap-align: start;
+    scroll-margin-inline-start: 1.5rem;
+    padding: 1rem 2em;
+  }
+
+  main > section:nth-of-type(4) > section > article > img {
+    height: 2em;
+    width: fit-content;
+    margin: 0.5em;
+  }
+
+  main > section:nth-of-type(4) > section > article > p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    padding-top: 1rem;
+  }
+
+  main > section:nth-of-type(4) > a:first-of-type {
+    margin: 3em auto 0 auto;
+  }
+}
+
+/* IMG + EEN OPTIE VOOR ELKE FIETSER  */
+
+/* De section zelf */
+main > section:nth-of-type(5) {
+  position: relative;
+  margin: 2em 1.25em;
+}
+
+/* Foto-blok bovenaan (decoratief) */
+main > section:nth-of-type(5)::before {
+  content: "";
+  display: block;
+  height: 37em;
+  background: url("../images/lease-a-cowboy.jpg") center / cover no-repeat;
+  border-radius: 0.75em;
+  margin-bottom: 1.25em;
+}
+
+/* Een optie voor elke fietser */
+main > section:nth-of-type(5) > article > h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  color: var(--primary-text-color);
+}
+
+/* De teksts */
+main > section:nth-of-type(5) > article > p {
+  color: var(--quaternary-color);
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+/* Desktop: Een optie voor elke fietser */
+@media (min-width: 1024px) {
+  main > section:nth-of-type(5) {
+    display: flex;
+    gap: 4em;
+    align-items: center;
+    max-width: 80em;
+    margin: 6em auto;
+    padding: 0 2em;
+  }
+
+  main > section:nth-of-type(5)::before {
+    height: 50em;
+    margin-bottom: 0;
+    flex: 0 0 50%;
+    width: 50%;
+  }
+
+  main > section:nth-of-type(5) > article {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main > section:nth-of-type(5) > article > h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+  }
+
+  main > section:nth-of-type(5) > article > p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin: 0;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* FAQ summary*/
+
+main > section:nth-of-type(6) {
+  padding: 1em 1.5em;
+}
+
+/* FAQ sectie */
+main > section:nth-of-type(6) {
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+}
+
+/* Titel */
+main > section:nth-of-type(6) > h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Desktop: FAQ sectie */
+@media (min-width: 1024px) {
+  main > section:nth-of-type(6) {
+    max-width: 80em;
+    margin: 6em auto;
+    padding: 4em 2em;
+  }
+
+  main > section:nth-of-type(6) > h2 {
+    font-size: 4em;
+    margin-bottom: 1.5rem;
+    text-align: right;
+  }
+
+  main > section:nth-of-type(6) summary {
+    font-size: 1.4em;
+    padding: 1.5em 0;
+  }
+
+  main > section:nth-of-type(6) p {
+    font-size: 1.1em;
+    line-height: 1.7;
+  }
+}
+
+/* Vraagblokken */
+main > section:nth-of-type(6) details {
+  border-top: 0.0625em solid var(--border-color);
+  padding: 1.25em 0;
+  interpolate-size: allow-keywords; /*  hier begint de animatie */
+}
+
+main > section:nth-of-type(6) details:last-of-type {
+  border-bottom: 0.0625em solid var(--border-color);
+}
+
+/* Klikbare vraag */
+main > section:nth-of-type(6) summary {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.25em;
+  font-weight: 500;
+  padding: 0;
+}
+
+main > section:nth-of-type(6) summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Antwoordtekst */
+main > section:nth-of-type(6) p {
+  margin: 1em 0 0 0;
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+/* onze retour beleid */
+main > section:nth-of-type(6) details > p > a[href] {
+  all: revert;
+  color: var(--primary-text-color);
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+/* SVG iconen */
+main > section:nth-of-type(6) summary svg {
+  width: 1.25rem;
+  height: auto;
+  color: var(--primary-text-color);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+/* standaard: alleen + zichtbaar */
+
+main > section:nth-of-type(6) summary svg:nth-of-type(2) {
+  display: none;
+}
+
+/* open state: wissel naar - icoon */
+
+main > section:nth-of-type(6) details[open] summary svg:nth-of-type(1) {
+  display: none;
+}
+
+main > section:nth-of-type(6) details[open] summary svg:nth-of-type(2) {
+  display: inline-block;
+}
+
+/*  Animatie open en dicht */
+main > section:nth-of-type(6) details::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition: content-visibility, block-size;
+  transition-behavior: allow-discrete;
+}
+
+main > section:nth-of-type(6) details[open]::details-content {
+  block-size: auto;
+}
+
+/* Bron: https://blog.logrocket.com/styling-html-modern-css/ + Chatgpt */
+
+main > section:nth-of-type(7) {
+  background-color: var(--color-bg-7);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+
+  overflow: hidden;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 3em 1em;
+}
+
+/* We komen naar je toe */
+main section:nth-of-type(7) > article > h2 {
+  margin: 0 0 0.85em 0;
+  padding-top: 0;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  text-align: center;
+}
+
+/* Ervaar het zelf*/
+main section:nth-of-type(7) > article > h3 {
+  margin: 0 0 0.375em 0;
+  font-size: 2.25em;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+/* Button */
+main section:nth-of-type(7) > article > a:first-of-type {
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 1em 1.25em;
+  border-radius: 2em;
+  background: var(--primary-text-color);
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+main section:nth-of-type(7) > article > a:first-of-type:hover {
+  background-color: var(--tertiary-color);
+}
+
+/* fiets afbeelding */
+main section:nth-of-type(7) > img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  transform: scale(1.2);
+  transform-origin: center bottom;
+  margin-top: 2em;
+  padding: 3em 0 3em 0;
+}
+
+/* Desktop: We komen naar je toe */
+@media (min-width: 1024px) {
+  main > section:nth-of-type(7) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    left: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  main > section:nth-of-type(7) > article {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2em;
+    min-width: 22rem;
+  }
+
+  main section:nth-of-type(7) > article > h2 {
+    margin-bottom: 0.85em;
+    text-align: left;
+  }
+
+  main section:nth-of-type(7) > article > h3 {
+    font-size: 3em;
+    margin-bottom: 0.375em;
+    text-align: left;
+  }
+
+  main section:nth-of-type(7) > article > a:first-of-type {
+    margin: 1.5em 0 0 0;
+  }
+
+  main section:nth-of-type(7) > img {
+    margin: 0;
+    padding: 0;
+    transform: scale(0.7);
+    transform-origin: center;
+  }
+}
