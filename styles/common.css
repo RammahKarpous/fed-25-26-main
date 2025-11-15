@@ -543,7 +543,7 @@ footer > section:first-of-type {
   flex-wrap: wrap;
   gap: 2em;
   justify-content: space-between;
-  padding: 0 1em;
+  padding: 2em 1em;
 }
 
 @media (min-width: 1024px) {
@@ -555,7 +555,7 @@ footer > section:first-of-type {
 
   footer > section:first-of-type {
     flex: 1 1 50%;
-    padding: 0 1em;
+    padding: 2em 1em 0 1em;
   }
 }
 
@@ -882,6 +882,12 @@ footer > section:last-of-type a {
   font-weight: 400;
   margin-bottom: 1em;
   margin-left: 1em;
+}
+
+@media (min-width: 1024px) {
+  footer > section:last-of-type a {
+    margin-bottom: 0;
+  }
 }
 
 footer > section:last-of-type a:hover {
