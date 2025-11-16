@@ -131,7 +131,7 @@ body > section header {
   padding: 0em 1.5em;
 }
 
-/* Header logo */
+/* Header logo -- mobiel */
 body > section header > a > svg {
   display: block;
   width: auto;
@@ -403,8 +403,74 @@ body > section header > nav > section:nth-of-type(3) svg {
   position: absolute;
 }
 
-/*** ALGEMENE BUTTONS***/
+/* Desktop: navigatie header */
+body > section header:nth-of-type(3) {
+  display: none;
+}
 
+/* Header logo */
+body > section header:nth-of-type(3) a svg {
+  display: block;
+  width: auto;
+  height: 1.1875em;
+  color: var(--secondary-color);
+  margin: 1rem 0;
+}
+
+body > section header:nth-of-type(3) ul {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body > section header:nth-of-type(3) ul a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+body > section header:nth-of-type(3) nav {
+  position: relative;
+  translate: 0% 0%;
+  height: auto;
+  width: auto;
+  background-color: transparent;
+}
+
+@media (min-width: 1024px) {
+  body > section header:nth-of-type(2){
+    display: none;
+  }
+  
+  body > section header:nth-of-type(3){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/*** ALGEMENE BUTTONS***/
+/* Button in de desktop navigatie */
+body > section header:nth-of-type(3) section:nth-of-type(2) ul li:nth-of-type(3) a:last-of-type {
+  display: block;
+  width: max-content;
+  margin: 1em auto;
+  padding: 0.75em 1em;
+  border-radius: 999em;
+  border: none;
+  line-height: 1;
+
+  background-color: var(--primary-text-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-size: 1em;
+}
 /* Eerste link button - voor sections met nested section (eerste section) */
 main > section:first-of-type > section > a:first-of-type,
 /* Eerste link button - voor sections met nested section (tweede section) */

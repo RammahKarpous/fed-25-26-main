@@ -786,9 +786,31 @@ main section:nth-of-type(6) > section > h3 {
   color: var(--primary-color);
 }
 
+@media (min-width: 1024px) {
+  main section:nth-of-type(6) {
+    padding: 3em 4em;
+    background-position: center bottom;
+  }
+
+  main section:nth-of-type(6) > section > h2 {
+    font-size: 1.25em;
+    text-align: left;
+    margin: 0;
+    color: var(--secondary-text-color);
+  }
+
+  main section:nth-of-type(6) > section > h3 {
+    font-size: 4em;
+    text-align: left;
+    max-width: 14ch;
+    margin: 0.5em 0 0.5em;
+    line-height: 0.95;
+  }
+}
+
 /* Witte button (hij doet het nu niet) */
 body > main > section:nth-of-type(6) > section > a:first-of-type {
-  background-color: red;
+  background-color: var(--primary-color);
   color: var(--primary-text-color);
 }
 
